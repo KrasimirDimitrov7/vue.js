@@ -1,32 +1,52 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <router-link to="/">Register</router-link>
+    <router-link to="/login">Login</router-link>
+    <router-link to="/my-profile">My Profile</router-link>
+    <router-link to="/tickets">Tickets</router-link>
+    <router-link to="/categories">Categories</router-link>
+    <router-link to="/tickettype">Ticket Type</router-link>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  *{
+    box-sizing: border-box;
+    font-family: 'callibry';
+  }
 
-nav {
-  padding: 30px;
-}
+  a {
+    margin: 0 10px;
+  }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  .popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .popup-box {
+    background: white;
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 20px;
+  }
+
+  .popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .popup-header h4{
+    margin: 0;
+  }
 </style>
